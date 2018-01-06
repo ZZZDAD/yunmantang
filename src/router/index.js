@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Release from '@/components/Release'
 import Message from '@/components/Message'
-import Mine from '@/components/Mine'
+import My from '@/components/My'
 
 Vue.use(Router)
 
@@ -25,9 +25,9 @@ export default new Router({
       component: Message
     },
     {
-      path: '/mine',
-      name: 'Mine',
-      component: Mine
+      path: '/my',
+      name: 'My',
+      component: My
     }
   ]
 })

@@ -1,21 +1,15 @@
 <template>
   <div>
-    消息
-    <MessageList></MessageList>
+    HomeList
   </div>
 </template>
 
 <script>
-import MessageList from './MessageList.vue'
-
 export default {
   data () {
     return {
       
     }
-  },
-  components: {
-  	MessageList
   }
 }
 </script>

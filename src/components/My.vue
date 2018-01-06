@@ -1,12 +1,14 @@
 <template>
   <div>
-    消息
-    <MessageList></MessageList>
+    我的
+    <MyId></MyId>
+    <MyStatus></MyStatus>
   </div>
 </template>
 
 <script>
-import MessageList from './MessageList.vue'
+import MyId from './MyId.vue'
+import MyStatus from './MyStatus.vue'
 
 export default {
   data () {
@@ -15,7 +17,8 @@ export default {
     }
   },
   components: {
-  	MessageList
+  	MyId,
+  	MyStatus
   }
 }
 </script>

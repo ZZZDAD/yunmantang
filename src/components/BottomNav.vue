@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="footer_nav">
+  <div class="container" id="nav">
     <div class="row">
       <div class="col">
         <router-link to='/'>
@@ -17,7 +17,7 @@
         </router-link>
       </div>
       <div class="col">
-        <router-link to='/mine'>
+        <router-link to='/my'>
           我的
         </router-link>
       </div>
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style>
-div#footer_nav {
+div#nav {
   border-top: 1px rgb(71,71,71) solid;
   height: 50px;
   position: fixed;

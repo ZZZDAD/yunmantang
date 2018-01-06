@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <router-view/>
-    <FooterNav></FooterNav>
+    <BottomNav></BottomNav>
   </div>
 </template>
 
 <script>
-import FooterNav from './components/FooterNav.vue'
+import BottomNav from './components/BottomNav.vue'
 
 export default {
   name: 'app',
   components: {
-    FooterNav
+    BottomNav
   }
 }
 </script>
