@@ -1,6 +1,7 @@
 <template>
   <div>
-    HomeNav
+   	HomeNav
+  	
   </div>
 </template>
 

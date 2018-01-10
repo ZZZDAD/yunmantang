@@ -41,5 +41,6 @@ div#nav {
   height: 50px;
   position: fixed;
   bottom: 0;
+  background: white;
 }
 </style>
