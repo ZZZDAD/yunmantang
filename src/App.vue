@@ -1,18 +1,12 @@
 <template>
   <div id="app">
     <router-view/>
-    <BottomNav></BottomNav>
   </div>
 </template>
 
 <script>
-import BottomNav from './components/BottomNav.vue'
-
 export default {
-  name: 'app',
-  components: {
-    BottomNav
-  }
+  name: 'app'
 }
 </script>
 
