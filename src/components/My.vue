@@ -13,15 +13,15 @@ import MyStatus from './MyStatus.vue'
 import MyBottomNav from './MyBottomNav.vue'
 
 export default {
+  components: {
+    MyId,
+    MyStatus,
+    MyBottomNav
+  },
   data () {
     return {
       
     }
-  },
-  components: {
-  	MyId,
-  	MyStatus,
-    MyBottomNav
   }
 }
 </script>

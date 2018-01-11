@@ -1,6 +1,5 @@
 <template>
   <div id="home">
-    首页
     <HomeSearch></HomeSearch>
     <HomeKind></HomeKind>
     <HomeList></HomeList>
@@ -15,16 +14,16 @@ import HomeList from './HomeList.vue'
 import HomeBottomNav from './HomeBottomNav.vue'
 
 export default {
+  components: {
+    HomeSearch,
+    HomeKind,
+    HomeList,
+    HomeBottomNav
+  },
   data () {
     return {
       
     }
-  },
-  components: {
-  	HomeSearch,
-    HomeKind,
-    HomeList,
-    HomeBottomNav
   }
 }
 </script>

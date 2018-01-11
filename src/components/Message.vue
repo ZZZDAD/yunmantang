@@ -11,14 +11,14 @@ import MessageList from './MessageList.vue'
 import MessageBottomNav from './MessageBottomNav.vue'
 
 export default {
+  components: {
+    MessageList,
+    MessageBottomNav
+  },
   data () {
     return {
       
     }
-  },
-  components: {
-  	MessageList,
-    MessageBottomNav
   }
 }
 </script>

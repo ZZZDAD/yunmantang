@@ -41,12 +41,12 @@ export default {
 <style>
 #homeKind {
 	background: white;
-	margin-top: 25px;
+	margin-top: 48px;
 }
 .col {
 	height: 80px;
 	font-size: .82em;
-	color: rgb(60,60,60);
+	color: rgb(24,152,217);
 }
 .col img {
 	width: 40px;
