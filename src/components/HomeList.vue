@@ -2,7 +2,7 @@
   <div id="homeList">
   	<HomeListDetail
   		v-for='(list,index) of lists'
-  		:key='index'
+  		key='index'
   		:list='list'
   	>
   	</HomeListDetail>
@@ -22,7 +22,7 @@ export default {
     		{
     			user: {
     				name: '中国人',
-    				headImage: '../../static/images/yagao.gif'
+    				headImage: '../../static/images/person.jpg'
     			},
     			article: {
     				name: '牙膏',
@@ -39,7 +39,7 @@ export default {
     		{
     			user: {
     				name: '中国人',
-    				headImage: '../../static/images/yagao.gif'
+    				headImage: '../../static/images/person.jpg'
     			},
     			article: {
     				name: '牙膏',
@@ -55,7 +55,7 @@ export default {
     		{
     			user: {
     				name: '中国人',
-    				headImage: '../../static/images/yagao.gif'
+    				headImage: '../../static/images/person.jpg'
     			},
     			article: {
     				name: '牙膏',
@@ -79,5 +79,6 @@ export default {
 #homeList {
 	margin-top: 1.5px;
 	background: white;
+  margin-bottom: 50px;
 }
 </style>

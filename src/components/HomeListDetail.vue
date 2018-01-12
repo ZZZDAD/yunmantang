@@ -50,7 +50,7 @@ export default {
 .box {
   color: rgb(71,71,71);
 	border-bottom: 1px solid rgb(240,240,240);
-	height: 235px;
+	height: 100%;
   text-align: left;
 }
 .box .head {

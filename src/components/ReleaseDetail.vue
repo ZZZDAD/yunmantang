@@ -86,7 +86,7 @@ input#price {
 	height: 40px;
 	border: rgb(24,152,217) 1px solid;
 	border-radius: 4px;
-	margin-right: 15px;
+	margin-right: 2%;
 	text-align: center;
 	font-size: 1.1em;
 	color: rgb(51,51,51);
@@ -104,6 +104,9 @@ label.kindLabel {
 	left: -10.5%;
 	font-size: 1.1em;
 	background: white;
+	line-height: 1.9em;
+	padding: 5px;
+	text-indent: 1em;
 }
 img.down {
 	width: 20px;

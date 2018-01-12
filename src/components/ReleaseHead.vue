@@ -20,7 +20,7 @@ export default {
 	height: 48px;
 	background: rgb(24,152,217);
 	color: white;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	line-height: 48px;
 }
 img.hand {

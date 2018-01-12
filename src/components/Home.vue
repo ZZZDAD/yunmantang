@@ -31,6 +31,5 @@ export default {
 <style>
 #home {
   background: rgb(240,240,240);
-  height: 1000px;
 }
 </style>
