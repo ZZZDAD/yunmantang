@@ -9,13 +9,24 @@
   	<label class="kindLabel"> 分类 </label>
   	<select id="kind">
   		<option
-  			v-for='option of options'
-  			:value='option.value'
+  			v-for='kind of kinds'
+  			:value='kind.value'
   		>
-  		{{ option.text }}
+  		{{ kind.text }}
   		</option>
   	</select>
-  	<img src="../../static/images/icons/down.png" class="down">
+  	<img src="../../static/images/icons/down.png" class="firstDown">
+  	<br><br>
+  	<label class="daysLabel"> 上架时长 </label>
+  	<select id="days">
+  		<option
+  			v-for='day of days'
+  			:value='day.value'
+  		>
+  		{{ day.time }}
+  		</option>
+  	</select>
+  	<img src="../../static/images/icons/down.png" class="secondDown">
   	<br><br>
   	<label class="originalPrice"> 原价 </label>
   	<input type="number" id="originalPrice" min="0" max="50000"/>
@@ -28,7 +39,7 @@
 export default {
   data () {
     return {
-      options: [
+      kinds: [
       	{text: '请选择',value: ''},
       	{text: '化妆品',value: ''},
       	{text: '服饰',value: ''},
@@ -40,6 +51,12 @@ export default {
       	{text: '运动装备',value: ''},
       	{text: '手机饰品',value: ''},
       	{text: '其他',value: ''}
+      ],
+      days: [
+      	{time: '请选择'},
+      	{time: '3天'},
+      	{time: '7天'},
+      	{time: '15天'}
       ]
     }
   }
@@ -49,6 +66,12 @@ export default {
 <style>
 #releaseDetail {
 	margin-top: 30px;
+}
+underline {
+	display: block;
+	margin: 10px auto;
+	width: 80%;
+	border-bottom: 1px solid rgb(222,221,222);
 }
 #releaseDetail label {
 	font-size: 1.2em;
@@ -64,21 +87,44 @@ export default {
 	position: relative;
 	top: -65px;
 }
+#releaseDetail textarea.introduction {
+	height: 90px;
+}
+#releaseDetail label.kindLabel,
+#releaseDetail label.daysLabel {
+	float: left;
+	margin-left: 11%;
+	margin-top: 1%;
+}
+#kind,#days {
+	border: rgb(24,152,217) 1px solid;
+	border-radius: 4px;
+	width: 40%;
+	height: 40px;
+	font-size: 1.1em;
+	background: white;
+	text-indent: 1.2em;
+	float: right;
+	margin-right: 18%;
+}
+img.firstDown {
+	width: 20px;
+	position: relative;
+	right: -43%;
+	top: 5px;
+}
+img.secondDown {
+	width: 20px;
+	position: relative;
+	right: -38.5%;
+	top: 6px;
+}
 #releaseDetail label.originalPrice,
 #releaseDetail label.price {
 	background: rgb(24,152,217);
 	color: white;
 	padding: 5px;
 	border-radius: 4px;
-}
-#releaseDetail textarea.introduction {
-	height: 90px;
-}
-underline {
-	display: block;
-	margin: 10px auto;
-	width: 80%;
-	border-bottom: 1px solid rgb(222,221,222);
 }
 input#originalPrice,
 input#price {
@@ -90,28 +136,5 @@ input#price {
 	text-align: center;
 	font-size: 1.1em;
 	color: rgb(51,51,51);
-}
-label.kindLabel {
-	position: relative;
-	left: -13%;
-}
-#kind {
-	border: rgb(24,152,217) 1px solid;
-	border-radius: 4px;
-	width: 150px;
-	height: 40px;
-	position: relative;
-	left: -10.5%;
-	font-size: 1.1em;
-	background: white;
-	line-height: 1.9em;
-	padding: 5px;
-	text-indent: 1em;
-}
-img.down {
-	width: 20px;
-	position: relative;
-	left: -20%;
-	top: -2px;
 }
 </style>
