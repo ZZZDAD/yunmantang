@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import fetch from '@/utils/fetch'
+import { postRelease, getUser } from '@/api/article'
 
 Vue.use(Vuex)
 
@@ -12,16 +12,25 @@ export default new Vuex.Store({
 
 	},
 	mutations: {
-		release(state, item){
+		GET_USER (state, data) {
+			console.log(data)
+		},
+		release (state, item) {
 			console.log(item)
-			fetch({
-				url: '/release',
-				method: 'POST',
-				params: item
-			})
+
 		}
 	},
 	actions: {
-
+		GetUser ({ commit }) {
+			return new Pormise((resolve, reject) => {
+				getUser().then(response => {
+					const data = response.data
+					commit('GET_USER', data)
+					resolve(response.data)
+				}).catch(error => {
+					reject(error)
+				})
+			})
+		}
 	}
 })

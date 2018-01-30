@@ -3,7 +3,8 @@
   	<div class="row">
   		<div
         class="col"
-        v-for='kind of [kinds[1],kinds[2],kinds[3],kinds[4],kinds[5]]'
+        v-for='(kind,index) of [kinds[1],kinds[2],kinds[3],kinds[4],kinds[5]]'
+        :key='index'
         @click='setKind(kind.value)'
       >
   			<img :src="kind.icon">
@@ -13,7 +14,8 @@
   	<div class="row">
   		<div
         class="col"
-        v-for='kind of [kinds[6],kinds[7],kinds[8],kinds[9],kinds[10]]'
+        v-for='(kind,index) of [kinds[6],kinds[7],kinds[8],kinds[9],kinds[10]]'
+        :key='index'
         @click='setKind(kind.value)'
       >
   			<img :src="kind.icon">
@@ -31,7 +33,7 @@ export default {
     }
   },
   methods: {
-    setKind(kind) {
+    setKind (kind) {
       this.$emit('transferKind', kind);
     }
   }
@@ -41,7 +43,7 @@ export default {
 <style lang="scss">
 #homeKindWithIcon {
   margin-top: 48px;
-  border-bottom: 2px rgb(240,240,240) solid;
+  border-bottom: 2px rgb(240, 240, 240) solid;
   .col {
     height: 70px;
     padding: 0;
@@ -52,8 +54,8 @@ export default {
       margin: 5px auto -5px;
     }
     .kindName {
-      font-size: .7em;
-      color: rgb(24,152,217);
+      font-size: 0.7em;
+      color: rgb(24, 152, 217);
     }
   }
 }

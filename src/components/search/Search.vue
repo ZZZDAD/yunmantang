@@ -33,12 +33,12 @@ export default {
     }
   },
   methods: {
-    getInputValue(inputValue) {
+    getInputValue (inputValue) {
       this.inputValue = inputValue;
     },
-    searchItem(e) {
+    searchItem (e) {
       //跳转
-      this.$router.push({name: 'SearchResult', params: {item: this.inputValue}});
+      this.$router.push({ name: 'SearchResult', params: { item: this.inputValue } });
     }
   }
 }

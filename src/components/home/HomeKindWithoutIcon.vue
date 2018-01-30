@@ -5,7 +5,8 @@
         <div class="kind_row">
           <div
             class="kind"
-            v-for="kind of kinds"
+            v-for="(kind, index) of kinds"
+            :key="index"
             @click='chooseKind(kind.value)'
             :class="{'active':(chooseKindValue == kind.value)}"
           >
@@ -40,11 +41,11 @@ export default {
     handleScroll () {
       let h = 105; //header的高度
       let wh = $(window).scrollTop(); //滚动的距离的
-      
+
       if (wh > h) this.isShow = true;
       else this.isShow = false;
     },
-    chooseKind(kind) {
+    chooseKind (kind) {
       this.$emit('transferKind', kind);
     }
   },
@@ -63,11 +64,11 @@ export default {
 <style lang="scss">
 #homeKindWithoutIcon {
   font-size: 1.1em;
-  color: rgb(150,150,150);
+  color: rgb(150, 150, 150);
   height: 35px;
   line-height: 35px;
   overflow-x: auto;
-  border-bottom: 2px rgb(240,240,240) solid;
+  border-bottom: 2px rgb(240, 240, 240) solid;
   position: fixed;
   top: 48px;
   right: 0;
@@ -85,16 +86,16 @@ export default {
       padding-right: 10px;
       &.active {
         color: white;
-        background: rgb(24,152,217);
+        background: rgb(24, 152, 217);
       }
     }
   }
 }
 .homeKindFade-enter-active {
-  transition: all .6s ease;
+  transition: all 0.6s ease;
 }
 .homeKindFade-leave-active {
-  transition: all .6s;
+  transition: all 0.6s;
 }
 .homeKindFade-leave-to {
   transform: translateY(-48px);

@@ -4,6 +4,7 @@
       <div
         class="col"
         v-for='(nav,index) of navs'
+        :key='index'
       >
         <router-link
           :to='nav.to'
@@ -57,14 +58,14 @@ export default {
   left: 0;
   right: 0;
   width: 100%;
-  background: rgb(248,247,245);
-  box-shadow: .5px -.5px 1px rgb(222,222,222);
+  background: rgb(248, 247, 245);
+  box-shadow: 0.5px -0.5px 1px rgb(222, 222, 222);
   a {
-    color: rgb(94,94,94);
-    font-size: .8em;
-    text-decoration:none;
+    color: rgb(94, 94, 94);
+    font-size: 0.8em;
+    text-decoration: none;
     &.active {
-      color: rgb(24,152,217);
+      color: rgb(24, 152, 217);
     }
     img {
       margin: 2px auto -5px;

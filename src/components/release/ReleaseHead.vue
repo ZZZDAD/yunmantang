@@ -9,7 +9,7 @@
 export default {
   data () {
     return {
-      
+
     }
   }
 }
@@ -17,15 +17,17 @@ export default {
 
 <style lang="scss">
 #releaseHead {
-	height: 48px;
-	background: rgb(24,152,217);
-	color: white;
-	font-size: 1.2em;
-	line-height: 48px;
+  height: 48px;
+  background: rgb(24, 152, 217);
+  color: white;
+  font-size: 1.2em;
+  line-height: 48px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  img.hand {width: 30px}
+  img.hand {
+    width: 30px;
+  }
 }
 </style>

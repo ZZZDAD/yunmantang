@@ -10,6 +10,7 @@
       <div
         class="myReleaseItem"
         v-for='(item, index) of myReleaseItems'
+        :key='index'
       >
         <div class="highlightBG">
           <div class="image">
@@ -57,11 +58,11 @@ export default {
       ]
     }
   },
-  mounted() {
+  mounted () {
     console.log(this.$route.params.userId);
   },
   methods: {
-    goBack(e) {
+    goBack (e) {
       this.$router.go(-1);
     }
   }
@@ -78,7 +79,7 @@ export default {
     height: 48px;
     line-height: 48px;
     font-size: 1.2em;
-    background: rgb(24,152,217);
+    background: rgb(24, 152, 217);
     color: white;
     z-index: 99;
     .img-div {
@@ -101,9 +102,9 @@ export default {
     text-align: left;
     .myReleaseItem {
       height: 140px;
-      border-bottom: 1px rgb(160,160,160) solid;
+      border-bottom: 1px rgb(160, 160, 160) solid;
       .highlightBG {
-        background: rgb(245,245,245);
+        background: rgb(245, 245, 245);
         padding: 0 20px;
         height: 110px;
         .image {
@@ -126,7 +127,7 @@ export default {
         }
         .price {
           font-size: 1.1em;
-          color: rgb(71,71,71);
+          color: rgb(71, 71, 71);
           position: relative;
           top: -90px;
           left: 130px;
@@ -137,20 +138,21 @@ export default {
           position: relative;
           top: -60px;
           margin-right: 10px;
-          border: 1px rgb(220,220,220) solid;
+          border: 1px rgb(220, 220, 220) solid;
           border-radius: 15px;
-          background: rgb(245,245,245);
-          color: rgb(110,110,110);
+          background: rgb(245, 245, 245);
+          color: rgb(110, 110, 110);
         }
       }
-      .releaseTime, .remainTime {
+      .releaseTime,
+      .remainTime {
         display: inline-block;
         width: 140px;
-        color: rgb(24,152,217);
+        color: rgb(24, 152, 217);
         margin-left: 10px;
         margin-top: 2px;
         span.highlight {
-          background: rgb(24,152,217);
+          background: rgb(24, 152, 217);
           padding: 2px 4px 2px 6px;
           color: white;
           border-radius: 10px;

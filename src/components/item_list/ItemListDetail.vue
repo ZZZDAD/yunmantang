@@ -36,7 +36,7 @@
 
 <script>
 export default {
-	props: {
+  props: {
     item: {
       type: Object,
       required: true
@@ -47,9 +47,9 @@ export default {
 
 <style lang="scss">
 .ItemListDetail {
-  color: rgb(71,71,71);
-	border-bottom: 1px solid rgb(240,240,240);
-	height: 100%;
+  color: rgb(71, 71, 71);
+  border-bottom: 1px solid rgb(240, 240, 240);
+  height: 100%;
   text-align: left;
   .head {
     display: block;
@@ -73,9 +73,11 @@ export default {
         font-size: 1em;
       }
       .userName {
-        font-size: .8em;
+        font-size: 0.8em;
       }
-      .releaseTime {font-size: .6em}
+      .releaseTime {
+        font-size: 0.6em;
+      }
     }
     .price-div {
       float: right;
@@ -83,15 +85,17 @@ export default {
       width: 22%;
       margin-bottom: 0;
       .price {
-        color: rgb(239,73,43);
+        color: rgb(239, 73, 43);
         margin: 0;
         display: block;
         font-size: 1.2em;
-        .rmbSymbol {font-size: .6em}
+        .rmbSymbol {
+          font-size: 0.6em;
+        }
       }
       .originalPrice {
-        text-decoration:line-through;
-        font-size: .6em;
+        text-decoration: line-through;
+        font-size: 0.6em;
         position: relative;
         top: -8px;
         left: 3px;
@@ -109,14 +113,14 @@ export default {
     }
     .introduction {
       margin-bottom: 5px;
-      font-size: .9em;
+      font-size: 0.9em;
       width: 80%;
       height: 1.3em;
       overflow: hidden;
     }
     .tip {
-      font-size: .6em;
-      color: rgb(130,131,133);
+      font-size: 0.6em;
+      color: rgb(130, 131, 133);
     }
   }
 }

@@ -4,6 +4,7 @@
       <div
         class="col"
         v-for='(nav,index) of navs'
+        :key="index"
       >
         <router-link
           :to='nav.to'

@@ -16,7 +16,8 @@
 	      	{{ booking.commodityName }}
 	      </span>
 	      <img
-          v-for="image of booking.commodityImages"
+          v-for="(image,index) of booking.commodityImages"
+          :key='index'
 		      :src="image"
 		      class="commodityImages"
 	      >
@@ -54,41 +55,41 @@
 export default {
   data () {
     return {
-    	showIndex: -1,
+      showIndex: -1,
       bookings: [
-      	{
-      		commodityName: '牙膏',
-      		commodityImages: [
-      			'../../../static/images/yagao.gif',
+        {
+          commodityName: '牙膏',
+          commodityImages: [
             '../../../static/images/yagao.gif',
-      			'../../../static/images/yagao.gif'
-      		],
-      		remainTime: '12天',
-      		messages: [
-      			{
-      				userName: '张大D',
-      				userHead: '../../../static/images/person.jpg',
-      				userMessage: '八块卖不llllll啦啦啦啦啦啦啦啦',
-      				time: '13:00'
-      			},
-      			{
-      				userName: '张大D15116',
-      				userHead: '../../../static/images/person.jpg',
-      				userMessage: '八块卖不',
-      				time: '13:00'
-      			}
-      		]
-      	},
-      	{
-      		commodityName: '龟苓膏',
-      		commodityImages: [
-      			'../../../static/images/yagao.gif'
-      		],
-      		remainTime: '12',
-      		messages: [
-      			
-      		]
-      	}
+            '../../../static/images/yagao.gif',
+            '../../../static/images/yagao.gif'
+          ],
+          remainTime: '12天',
+          messages: [
+            {
+              userName: '张大D',
+              userHead: '../../../static/images/person.jpg',
+              userMessage: '八块卖不llllll啦啦啦啦啦啦啦啦',
+              time: '13:00'
+            },
+            {
+              userName: '张大D15116',
+              userHead: '../../../static/images/person.jpg',
+              userMessage: '八块卖不',
+              time: '13:00'
+            }
+          ]
+        },
+        {
+          commodityName: '龟苓膏',
+          commodityImages: [
+            '../../../static/images/yagao.gif'
+          ],
+          remainTime: '12',
+          messages: [
+
+          ]
+        }
       ]
     }
   }
@@ -97,7 +98,7 @@ export default {
 
 <style lang="scss">
 #messageBooking {
-	text-align: left;
+  text-align: left;
   .booking {
     .card-header {
       padding: 10px 25px;
@@ -106,7 +107,7 @@ export default {
       .commodityName {
         font-size: 1em;
         width: 90%;
-        border-bottom: 1px solid rgb(230,230,230);
+        border-bottom: 1px solid rgb(230, 230, 230);
         display: block;
       }
       .commodityImages {
@@ -116,8 +117,8 @@ export default {
       }
       .remainTime {
         float: right;
-        color: rgb(120,120,120);
-        font-size: .8em;
+        color: rgb(120, 120, 120);
+        font-size: 0.8em;
       }
     }
     .card-body {
@@ -137,8 +138,8 @@ export default {
           top: -10px;
         }
         .userMessage {
-          color: rgb(70,70,70);
-          font-size: .8em;
+          color: rgb(70, 70, 70);
+          font-size: 0.8em;
           display: block;
           position: relative;
           top: -30px;
@@ -151,10 +152,10 @@ export default {
           position: relative;
           top: -80px;
           left: 55%;
-          border: 1px rgb(24,152,217) solid;
+          border: 1px rgb(24, 152, 217) solid;
           border-radius: 8px;
-          background: rgb(24,152,217);
-          font-size: .9em;
+          background: rgb(24, 152, 217);
+          font-size: 0.9em;
           color: white;
           font-weight: 500;
           padding: 2px 10px;
@@ -167,7 +168,7 @@ export default {
     text-align: center;
     display: block;
     margin: 15px auto;
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }
 </style>

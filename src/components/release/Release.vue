@@ -88,13 +88,14 @@ export default {
     },
     //...mapMutations(["release"])
     release() {
-      var item = this.item;
-      if(item.name && item.introduction
-        && item.kind && item.duration
-        && item.price && item.photoFiles[0]) {
-        this.$store.commit("release",item);
-      }
-      else alert("请输入完整信息");
+      // var item = this.item;
+      // if(item.name && item.introduction
+      //   && item.kind && item.duration
+      //   && item.price && item.photoFiles[0]) {
+      //   this.$store.commit("release",item);
+      // }
+      // else alert("请输入完整信息");
+      this.$store.dispatch('GetUser')
     }
   }
 }

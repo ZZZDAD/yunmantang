@@ -19,7 +19,7 @@ export default {
   },
   data () {
     return {
-      
+
     }
   }
 }
@@ -27,6 +27,6 @@ export default {
 
 <style lang="scss">
 #message {
-  background: rgb(247,247,247);
+  background: rgb(247, 247, 247);
 }
 </style>

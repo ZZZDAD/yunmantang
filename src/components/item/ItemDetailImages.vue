@@ -10,6 +10,7 @@
       <ol class="carousel-indicators">
         <li
           v-for='(image,index) of images.src'
+          :key='index'
           :class="{'active':(activeIndex==index)}"
           @click='activeIndex=index'
         ></li>
@@ -17,6 +18,7 @@
       <!--图片区-->
       <div
         v-for='(image,index) of images.src'
+        :key='index'
         class="carousel-item"
         :class="{'active':(activeIndex==index)}"
       >
@@ -46,11 +48,11 @@ var startX = 0;
 var endX = 0;
 
 export default {
-	data () {
-		return {
+  data () {
+    return {
       activeIndex: 0
-		}
-	},
+    }
+  },
   props: {
     images: {
       type: Object,
@@ -58,16 +60,16 @@ export default {
     }
   },
   methods: {
-    touchStart(e){
+    touchStart (e) {
       startX = e.changedTouches[0].screenX;
     },
-    touchEnd(e){
+    touchEnd (e) {
       endX = e.changedTouches[0].screenX;
       var moveX = endX - startX;
-      if(moveX > 0 && this.activeIndex > 0)
-        this.activeIndex-=1;
-      if(moveX < 0 && this.activeIndex < this.images.total-1)
-        this.activeIndex+=1;
+      if (moveX > 0 && this.activeIndex > 0)
+        this.activeIndex -= 1;
+      if (moveX < 0 && this.activeIndex < this.images.total - 1)
+        this.activeIndex += 1;
     }
   }
 }
@@ -77,7 +79,7 @@ export default {
 #itemDetailImages {
   height: 320px;
   line-height: 320px;
-  background: rgb(244,244,244);
+  background: rgb(244, 244, 244);
   img {
     max-height: 320px;
     width: 100%;

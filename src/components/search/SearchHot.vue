@@ -6,7 +6,8 @@
   	<div class="hotList">
   		<span
   			class="hotItem"
-  			v-for='hotItem of hotItems'
+  			v-for='(hotItem,index) of hotItems'
+        :key='index'
         @click='clickItem(hotItem)'
   		>
   			{{ hotItem }}
@@ -19,28 +20,28 @@
 export default {
   data () {
     return {
-      hotItems: ['口红','防蚀剂','香奈儿','龟苓膏','口红','防蚀剂','香奈儿','龟苓膏']
+      hotItems: ['口红', '防蚀剂', '香奈儿', '龟苓膏', '口红', '防蚀剂', '香奈儿', '龟苓膏']
     }
   },
   methods: {
-    clickItem(text) {
+    clickItem (text) {
       //历史搜索
       var value = text;
-      if(!localStorage.historyItem) {
+      if (!localStorage.historyItem) {
         localStorage.historyItem = value;
       }
       else {
         var Array = [];
         Array = localStorage.historyItem.split(',');
         //清除相同记录
-        for(var index = 0; index < Array.length; index++) {
-          if(value == Array[index]) Array.splice(index,1);
+        for (var index = 0; index < Array.length; index++) {
+          if (value == Array[index]) Array.splice(index, 1);
         }
         Array.unshift(value);
         localStorage.historyItem = Array;
       }
       //传text值
-      this.$emit('transferInputValue',text);
+      this.$emit('transferInputValue', text);
       //搜索
       this.$emit('search');
     }
@@ -50,23 +51,23 @@ export default {
 
 <style lang="scss">
 #searchHot {
-	margin-top: 10px;
-	text-align: left;
-	.title {
-		margin: 15px;
-	}
-	.hotList {
-		margin-top: 10px;
+  margin-top: 10px;
+  text-align: left;
+  .title {
+    margin: 15px;
+  }
+  .hotList {
+    margin-top: 10px;
     width: 80%;
     .hotItem {
       display: inline-block;
       padding: 4px 12px;
       border-radius: 18px;
-      background: rgb(240,240,240);
-      font-size: .9em;
+      background: rgb(240, 240, 240);
+      font-size: 0.9em;
       margin-bottom: 8px;
       margin-left: 18px;
     }
-	}
+  }
 }
 </style>

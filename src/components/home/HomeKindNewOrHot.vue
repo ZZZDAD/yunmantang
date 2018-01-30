@@ -28,7 +28,7 @@ export default {
     }
   },
   methods: {
-    setNewOrHot(NewOrHot){ 
+    setNewOrHot (NewOrHot) {
       this.$emit('transferNewOrHot', NewOrHot);
     }
   }
@@ -37,15 +37,15 @@ export default {
 
 <style lang="scss">
 #homeKindNewOrHot {
-  border-bottom: 2px rgb(240,240,240) solid;
+  border-bottom: 2px rgb(240, 240, 240) solid;
   line-height: 35px;
   .col {
     height: 35px;
     padding: 0;
-    color: rgb(120,120,120);
+    color: rgb(120, 120, 120);
     &.active {
-      color: rgb(24,152,217);
-      border-bottom: 2px rgb(24,152,217) solid;
+      color: rgb(24, 152, 217);
+      border-bottom: 2px rgb(24, 152, 217) solid;
       font-weight: 500;
     }
   }

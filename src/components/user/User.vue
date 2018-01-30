@@ -11,22 +11,21 @@
 
 export default {
   components: {
-    
+
   },
-  mounted() {
+  mounted () {
     console.log(this.$route.params.userId);
     //http
   },
   data () {
     return {
 
-    }      
+    }
   }
 }
 </script>
 
 <style lang="scss">
 #user {
-  
 }
 </style>

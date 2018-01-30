@@ -10,6 +10,7 @@
       <div
         class="myBoughtItem"
         v-for='(item, index) of myBoughtItems'
+        :key='index'
       >
         <div class="highlightBG">
           <div class="image">
@@ -45,11 +46,11 @@ export default {
       ]
     }
   },
-  mounted() {
+  mounted () {
     console.log(this.$route.params.userId);
   },
   methods: {
-    goBack(e) {
+    goBack (e) {
       this.$router.go(-1);
     }
   }
@@ -66,7 +67,7 @@ export default {
     height: 48px;
     line-height: 48px;
     font-size: 1.2em;
-    background: rgb(24,152,217);
+    background: rgb(24, 152, 217);
     color: white;
     z-index: 99;
     .img-div {
@@ -89,9 +90,9 @@ export default {
     text-align: left;
     .myBoughtItem {
       height: 140px;
-      border-bottom: 1px rgb(160,160,160) solid;
+      border-bottom: 1px rgb(160, 160, 160) solid;
       .highlightBG {
-        background: rgb(245,245,245);
+        background: rgb(245, 245, 245);
         padding: 0 20px;
         height: 110px;
         .image {
@@ -114,7 +115,7 @@ export default {
         }
         .price {
           font-size: 1.1em;
-          color: rgb(71,71,71);
+          color: rgb(71, 71, 71);
           position: relative;
           top: -90px;
           left: 130px;
@@ -125,18 +126,18 @@ export default {
           position: relative;
           top: -60px;
           margin-right: 10px;
-          background: rgb(245,245,245);
-          color: rgb(110,110,110);
+          background: rgb(245, 245, 245);
+          color: rgb(110, 110, 110);
         }
       }
       .seller {
         display: inline-block;
-        color: rgb(71,71,71);
+        color: rgb(71, 71, 71);
         margin-left: 20px;
         width: 90%;
         margin-top: 2px;
         span.highlight {
-          background: rgb(24,152,217);
+          background: rgb(24, 152, 217);
           padding: 2px 4px 2px 6px;
           color: white;
           border-radius: 10px;
@@ -145,11 +146,11 @@ export default {
         button {
           float: right;
           margin-right: 10%;
-          color: rgb(24,152,217);
-          border: 1px rgb(24,152,217) solid;
+          color: rgb(24, 152, 217);
+          border: 1px rgb(24, 152, 217) solid;
           background: white;
           border-radius: 16px;
-          font-size: .8em;
+          font-size: 0.8em;
         }
       }
     }

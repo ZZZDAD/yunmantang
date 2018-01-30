@@ -48,13 +48,13 @@ export default {
     }
   },
   methods: {
-    putPhoto(e) {
+    putPhoto (e) {
       var fileChooser = document.getElementById("choosePhoto");
       var photo = fileChooser.value;
       var src = window.navigator.userAgent.indexOf("Chrome") >= 1 ||
-                window.navigator.userAgent.indexOf("Safari") >= 1 ?
-                window.webkitURL.createObjectURL(fileChooser.files[0]) :
-                window.URL.createObjectURL(fileChooser.files[0])
+        window.navigator.userAgent.indexOf("Safari") >= 1 ?
+        window.webkitURL.createObjectURL(fileChooser.files[0]) :
+        window.URL.createObjectURL(fileChooser.files[0])
       this.photosSrcs.push(src);
 
       var maxSize = 1024 * 1024; // 1MB
@@ -64,7 +64,7 @@ export default {
       reader.readAsDataURL(file);
       reader.onload = (event) => {
         var result = event.target.result;
-        if(file.size > maxSize) { //需要压缩
+        if (file.size > maxSize) { //需要压缩
           var img = new Image();
           img.src = result;
           img.onload = () => {
@@ -82,12 +82,12 @@ export default {
           this.photoFiles.push(result);
         }
       }
-      setTimeout(()=>this.$emit('transferPhotos',this.photoFiles),300);
+      setTimeout(() => this.$emit('transferPhotos', this.photoFiles), 300);
     },
-    removePhoto(index) {
+    removePhoto (index) {
       var con;
-      con=confirm("是否删除照片？");
-      if(con==true){
+      con = confirm("是否删除照片？");
+      if (con == true) {
         this.photosSrcs.splice(index, 1);
         this.photoFiles.splice(index, 1);
       }
@@ -98,7 +98,7 @@ export default {
 
 <style lang="scss">
 #releasePhoto {
-	margin-top: 20px;
+  margin-top: 20px;
   margin-bottom: 50px;
   text-align: left;
   .head {
@@ -106,8 +106,8 @@ export default {
     font-size: 1.1em;
   }
   .tip {
-    color: rgb(180,180,180);
-    font-size: .6em;
+    color: rgb(180, 180, 180);
+    font-size: 0.6em;
     margin-left: 20px;
   }
   .photoGroup {
@@ -122,7 +122,7 @@ export default {
       width: 84px;
       height: 84px;
       margin: 0 5px;
-      border: 2px rgb(120,120,120) solid;
+      border: 2px rgb(120, 120, 120) solid;
       border-radius: 10px;
       overflow: hidden;
 
@@ -135,7 +135,7 @@ export default {
   .choosePhoto {
     margin-top: 12px;
     margin-left: 1%;
-    border: 2px rgb(120,120,120) solid;
+    border: 2px rgb(120, 120, 120) solid;
     padding: 10px;
     display: inline-block;
     border-radius: 10px;
