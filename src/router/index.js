@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Release from '@/components/Release'
-import Message from '@/components/Message'
-import My from '@/components/My'
+import Home from '@/components/home/Home'
+import Release from '@/components/release/Release'
+import Message from '@/components/message/Message'
+import My from '@/components/my/My'
 
 Vue.use(Router)
 
