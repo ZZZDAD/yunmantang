@@ -16,7 +16,7 @@
     ></ReleasePhoto>
     <button
       class="releaseButton"
-      @click=''
+      @click='release'
     >
       发布
     </button>
@@ -29,8 +29,14 @@ import ReleaseHead from './ReleaseHead.vue'
 import ReleasePhoto from './ReleasePhoto.vue'
 import ReleaseDetail from './ReleaseDetail.vue'
 import ReleaseBottomNav from './ReleaseBottomNav.vue'
+import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
 
 export default {
+  /*computed: {
+    ...mapState([
+      "count"
+    ])
+  },*/
   components: {
     ReleaseHead,
     ReleasePhoto,
@@ -39,44 +45,56 @@ export default {
   },
   data () {
     return {
-      name: '',
-      introduction: '',
-      kind: '',
-      duration: '',
-      mail: 0,
-      faceToFace: 0,
-      originalPrice: '',
-      price: '',
-      photoFiles: []
+      item: {
+        name: '',
+        introduction: '',
+        kind: '',
+        duration: '',
+        mail: 0,
+        faceToFace: 0,
+        originalPrice: 0,
+        price: '',
+        photoFiles: []
+      }
     }
   },
   methods: {
     getName(name) {
-      this.name = name;
+      this.item.name = name;
     },
     getIntroduction(introduction) {
-      this.introduction = introduction;
+      this.item.introduction = introduction;
     },
     getKind(kind) {
-      this.kind = kind;
+      this.item.kind = kind;
     },
     getDuration(duration) {
-      this.duration = duration;
+      this.item.duration = duration;
     },
     getMail(mail) {
-      this.mail = mail;
+      this.item.mail = mail;
     },
     getFaceToFace(faceToFace) {
-      this.faceToFace = faceToFace;
+      this.item.faceToFace = faceToFace;
     },
     getOriginalPrice(originalPrice) {
-      this.originalPrice = originalPrice;
+      this.item.originalPrice = originalPrice;
     },
     getPrice(price) {
-      this.price = price;
+      this.item.price = price;
     },
     getPhotos(photos) {
-      this.photoFiles = photos;
+      this.item.photoFiles = photos;
+    },
+    //...mapMutations(["release"])
+    release() {
+      var item = this.item;
+      if(item.name && item.introduction
+        && item.kind && item.duration
+        && item.price && item.photoFiles[0]) {
+        this.$store.commit("release",item);
+      }
+      else alert("请输入完整信息");
     }
   }
 }
