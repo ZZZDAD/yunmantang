@@ -21,7 +21,7 @@
 export default {
   data () {
     return {
-
+      
     }
   },
   props: {
@@ -31,10 +31,10 @@ export default {
     }
   },
   methods: {
-    setLike (e) {
+    setLike(e){
       //http请求
     },
-    removeLike (e) {
+    removeLike(e){
       //http请求
     }
   }
@@ -43,24 +43,24 @@ export default {
 
 <style lang="scss">
 #itemBottom {
-  height: 50px;
+	height: 50px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgb(248, 247, 245);
-  box-shadow: 0.5px -0.5px 1px rgb(222, 222, 222);
+  background: rgb(248,247,245);
+  box-shadow: .5px -.5px 1px rgb(222,222,222);
   line-height: 50px;
   img {
     width: 30px;
   }
   .booking {
-    width: 150px;
-    height: 100%;
-    line-height: 50px;
-    background: rgb(248, 167, 87);
-    color: white;
-    float: right;
+  	width: 150px;
+  	height: 100%;
+  	line-height: 50px;
+  	background: rgb(248,167,87);
+  	color: white;
+  	float: right;
   }
 }
 </style>

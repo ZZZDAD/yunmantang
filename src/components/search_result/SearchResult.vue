@@ -30,26 +30,26 @@ export default {
     ItemList
   },
   data () {
-    return {
+    return { 
       searchValue: this.$route.params.item,
       showSearch: 1
     }
   },
-  mounted () {
+  mounted() {
     console.log(this.$route.params.item);
     //http请求
   },
   methods: {
-    touchStart (e) {
+    touchStart(e) {
       startY = e.changedTouches[0].screenY;
     },
-    moving (e) {
+    moving(e) {
       endY = e.changedTouches[0].screenY;
       var moveY = endY - startY;
-      if (moveY > 100) { //上拉
+      if(moveY > 100) { //上拉
         this.showSearch = 1;
       }
-      if (moveY < 100) { //下滑
+      if(moveY < 100) { //下滑
         this.showSearch = 0;
       }
     }
@@ -66,10 +66,10 @@ export default {
   }
 }
 .searchResultInputFade-enter-active {
-  transition: all 0.6s ease;
+  transition: all .6s ease;
 }
 .searchResultInputFade-leave-active {
-  transition: all 0.6s;
+  transition: all .6s;
 }
 .searchResultInputFade-leave-to {
   transform: translateY(-48px);

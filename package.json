@@ -27,7 +27,10 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+<<<<<<< HEAD
     "babel-eslint": "^7.1.1",
+=======
+>>>>>>> parent of 3fe7202... 18/1/30
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",

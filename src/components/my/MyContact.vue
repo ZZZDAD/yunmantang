@@ -17,14 +17,14 @@ export default {
   data () {
     return {
       contacts: [
-        {
-          text: '联系客服',
-          icon: '../../../static/images/icons/logo.png'
-        },
-        {
-          text: '意见反馈',
-          icon: '../../../static/images/icons/logo.png'
-        },
+      	{
+      		text: '联系客服',
+      		icon: '../../../static/images/icons/logo.png'
+      	},
+      	{
+      		text: '意见反馈',
+      		icon: '../../../static/images/icons/logo.png'
+      	},
         {
           text: '关于我们',
           icon: '../../../static/images/icons/logo.png'
@@ -37,18 +37,18 @@ export default {
 
 <style lang="scss">
 #myContact {
-  background: white;
-  border-top: 15px rgb(240, 240, 240) solid;
-  border-bottom: 145px rgb(240, 240, 240) solid;
-  margin-bottom: 50px;
+	background: white;
+  border-top: 15px rgb(240,240,240) solid;
+  border-bottom: 145px rgb(240,240,240) solid;
+	margin-bottom: 50px;
   .contact {
-    border-bottom: 1px rgb(240, 240, 240) solid;
+    border-bottom: 1px rgb(240,240,240) solid;
     width: 100%;
     text-align: left;
     height: 50px;
     line-height: 50px;
     font-size: 1em;
-    color: rgb(44, 44, 44);
+    color: rgb(44,44,44);
   }
   img {
     &.icon {

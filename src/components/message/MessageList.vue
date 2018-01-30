@@ -7,7 +7,6 @@
             <li
               class="nav-item col"
               v-for='(nav,index) of navs'
-              :key='index'
               @click='activeIndex=index'
             >
               <span
@@ -36,7 +35,7 @@ import MessageListBooking from './MessageListBooking.vue'
 import MessageListNotice from './MessageListNotice.vue'
 
 export default {
-  components: {
+	components: {
     MessageListChat,
     MessageListBooking,
     MessageListNotice
@@ -45,9 +44,9 @@ export default {
     return {
       activeIndex: 0,
       navs: [
-        { text: '聊天' },
-        { text: '预订留言' },
-        { text: '通知' }
+        {text: '聊天'},
+        {text: '预订留言'},
+        {text: '通知'}
       ]
     }
   }
@@ -56,20 +55,20 @@ export default {
 
 <style lang="scss">
 #messageList {
-  #messageListNav {
+  #messageListNav{
     position: fixed;
     top: 48px;
     right: 0;
     left: 0;
     z-index: 50;
-    background: rgb(240, 240, 240);
+    background: rgb(240,240,240);
     .col {
       padding: 0;
-      font-size: 0.9em;
+      font-size: .9em;
       .nav-link {
         padding: 8px 0;
         &.active {
-          color: rgb(24, 152, 217);
+          color: rgb(24,152,217);
           font-weight: 600;
         }
       }

@@ -3,7 +3,6 @@
   	<div
   		class="chat"
   		v-for='(chat,index) of chats'
-      :key='index'
   	>
   		<span
   			class="newMessage"
@@ -33,27 +32,27 @@ export default {
   data () {
     return {
       chats: [
-        {
-          userName: '张大D',
-          userHead: '../../../static/images/person.jpg',
-          lastMessage: '哪里交货发反反复复反复哈哈哈哈哈快快快快快快可11122',
-          lastTime: '13:00',
-          newMessage: 0
-        },
-        {
-          userName: '张大D 2',
-          userHead: '../../../static/images/person.jpg',
-          lastMessage: 'how much？',
-          lastTime: '星期一',
-          newMessage: 2
-        },
-        {
-          userName: '张大D 2',
-          userHead: '../../../static/images/person.jpg',
-          lastMessage: 'how much？',
-          lastTime: '17/10/25',
-          newMessage: 99
-        },
+      	{
+      		userName: '张大D',
+      		userHead: '../../../static/images/person.jpg',
+      		lastMessage: '哪里交货发反反复复反复哈哈哈哈哈快快快快快快可11122',
+      		lastTime: '13:00',
+      		newMessage: 0
+      	},
+      	{
+      		userName: '张大D 2',
+      		userHead: '../../../static/images/person.jpg',
+      		lastMessage: 'how much？',
+      		lastTime: '星期一',
+      		newMessage: 2
+      	},
+      	{
+      		userName: '张大D 2',
+      		userHead: '../../../static/images/person.jpg',
+      		lastMessage: 'how much？',
+      		lastTime: '17/10/25',
+      		newMessage: 99
+      	},
         {
           userName: '张大D 2',
           userHead: '../../../static/images/person.jpg',
@@ -119,7 +118,7 @@ export default {
 <style lang="scss">
 #messageChat {
   .chat {
-    border-bottom: 1px rgb(230, 230, 230) solid;
+    border-bottom: 1px rgb(230,230,230) solid;
     width: 100%;
     height: 60px;
     text-align: left;
@@ -140,8 +139,8 @@ export default {
     right: 20px;
   }
   .lastMessage {
-    color: rgb(150, 150, 150);
-    font-size: 0.8em;
+    color: rgb(150,150,150);
+    font-size: .8em;
     display: block;
     position: relative;
     top: -24px;
@@ -151,8 +150,8 @@ export default {
     overflow: hidden;
   }
   .lastTime {
-    color: rgb(150, 150, 150);
-    font-size: 0.9em;
+    color: rgb(150,150,150);
+    font-size: .9em;
     position: relative;
     top: -70px;
     left: 84%;
@@ -169,20 +168,18 @@ export default {
     position: relative;
     right: -32px;
     color: white;
-    background: rgb(239, 80, 43);
+    background: rgb(239,80,43);
     padding: 1px 1px;
     font-size: 13px;
     text-align: center;
     z-index: 3;
-    &.hidden {
-      visibility: hidden;
-    }
+    &.hidden {visibility: hidden}
   }
   .noMessage {
     text-align: center;
     display: block;
     margin: 15px auto;
-    font-size: 0.9em;
+    font-size: .9em;
   }
 }
 </style>

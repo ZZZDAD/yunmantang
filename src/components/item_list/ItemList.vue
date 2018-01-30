@@ -133,7 +133,7 @@ export default {
 <style lang="scss">
 #itemList {
   a {
-    text-decoration: none;
+    text-decoration:none;
   }
 }
 </style>

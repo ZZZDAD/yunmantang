@@ -21,7 +21,7 @@ export default {
     }
   },
   methods: {
-    backHome (e) {
+    backHome(e){
       this.$router.push('/');
     }
   }
@@ -36,12 +36,12 @@ export default {
   left: 0;
   right: 0;
   padding: 6px 0 7px;
-  background: rgb(24, 152, 217);
+  background: rgb(24,152,217);
   z-index: 99;
   form {
     display: inline;
   }
-  input[type="search"] {
+  input[type='search'] {
     border-radius: 18px;
     width: 80%;
     height: 34px;
@@ -51,7 +51,7 @@ export default {
     background: white;
     border: 0;
     font-size: 1em;
-    color: rgb(71, 71, 71);
+    color: rgb(71,71,71);
   }
   .cancle {
     color: white;

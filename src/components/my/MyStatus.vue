@@ -22,25 +22,25 @@ export default {
   data () {
     return {
       allStatus: [
-        {
-          text: '我在发布',
-          icon: '../../../static/images/icons/releaseIcon.png',
+      	{
+      		text: '我在发布',
+      		icon: '../../../static/images/icons/releaseIcon.png',
           name: 'MyRelease'
-        }, {
+      	},{
           text: '我在预订',
           icon: '../../../static/images/icons/bookIcon.png',
           name: 'MyBooking'
-        }, {
+      	},{
           text: '我已卖出',
           icon: '../../../static/images/icons/saleIcon.png',
           name: 'MySold'
-        }, {
-          text: '我已买到',
+      	},{
+      		text: '我已买到',
           icon: '../../../static/images/icons/buyIcon.png',
           name: 'MyBought'
-        }
+      	}
       ],
-      statusTotal: [0, 0, 1, 2]
+      statusTotal: [0,0,1,2]
     }
   }
 }
@@ -48,9 +48,9 @@ export default {
 
 <style lang="scss">
 #myStatus {
-  background: white;
+	background: white;
   .status {
-    border-bottom: 1px rgb(240, 240, 240) solid;
+    border-bottom: 1px rgb(240,240,240) solid;
     width: 100%;
     text-align: left;
     height: 50px;
@@ -58,7 +58,7 @@ export default {
     font-size: 1em;
     a {
       text-decoration: none;
-      color: rgb(44, 44, 44);
+      color: rgb(44,44,44);
     }
     .icon {
       width: 30px;
@@ -66,7 +66,7 @@ export default {
     }
     .total {
       float: right;
-      color: rgb(100, 100, 100);
+      color: rgb(100,100,100);
       font-size: 1em;
       margin-right: 4%;
     }

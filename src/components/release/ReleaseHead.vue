@@ -1,6 +1,7 @@
 <template>
-  <div id="messageHead">
-    消息
+  <div id="releaseHead">
+  	<img class="hand" src="../../../static/images/icons/releaseHead.png">
+  	闲置物品
   </div>
 </template>
 
@@ -15,16 +16,16 @@ export default {
 </script>
 
 <style lang="scss">
-#messageHead {
+#releaseHead {
+	height: 48px;
 	background: rgb(24,152,217);
 	color: white;
 	font-size: 1.2em;
-	height: 48px;
 	line-height: 48px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  img.hand {width: 30px}
 }
 </style>

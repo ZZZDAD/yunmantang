@@ -63,7 +63,7 @@ export default {
             userName: '大D',
             headImage: '../../../static/images/person.jpg',
             content: '好棒hhhhhhssss555555555555555'
-          }, {
+          },{
             userName: '大D',
             headImage: '../../../static/images/person.jpg',
             content: '好棒hhhhhhhhhhhhhhhhhhhhhhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈ssssssss555555555555555'
@@ -77,5 +77,6 @@ export default {
 
 <style lang="scss">
 #item {
+  
 }
 </style>

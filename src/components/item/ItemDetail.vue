@@ -19,31 +19,31 @@ import ItemDetailComments from './ItemDetailComments.vue'
 
 export default {
 	components: {
-		ItemDetailImages,
-		ItemDetailContent,
-		ItemDetailComments
-	},
+    ItemDetailImages,
+    ItemDetailContent,
+    ItemDetailComments
+  },
 	data () {
 		return {
 
 		}
 	},
-	props: {
-		detail: {
-			type: Object,
-			required: true
-		},
-		comments: {
-			type: Array,
-			required: true
-		}
-	},
+  props: {
+    detail: {
+      type: Object,
+      required: true
+    },
+    comments: {
+    	type: Array,
+      required: true
+    }
+  },
 }
 </script>
 
 <style lang="scss">
 #itemDetail {
-  margin-top: 48px;
-  text-align: left;
+	margin-top: 48px;
+	text-align: left;
 }
 </style>

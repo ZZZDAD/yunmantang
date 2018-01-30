@@ -35,59 +35,59 @@ export default {
         {
           name: '全部',
           value: 'all'
-        }, {
+        },{
           name: '化妆品',
           value: 'cosmetic',
-          icon: '../../../static/images/icons/cosmetic.png'
-        }, {
+          icon:'../../../static/images/icons/cosmetic.png'
+        },{
           name: '服饰',
           value: 'clothes',
-          icon: '../../../static/images/icons/clothes.png'
-        }, {
+          icon:'../../../static/images/icons/clothes.png'
+        },{
           name: '电子产品',
           value: 'electronicProduct',
-          icon: '../../../static/images/icons/electronicProduct.png'
-        }, {
+          icon:'../../../static/images/icons/electronicProduct.png'
+        },{
           name: '书籍',
           value: 'books',
-          icon: '../../../static/images/icons/books.png'
-        }, {
+          icon:'../../../static/images/icons/books.png'
+        },{
           name: '文具',
           value: 'stationery',
-          icon: '../../../static/images/icons/stationery.png'
-        }, {
+          icon:'../../../static/images/icons/stationery.png'
+        },{
           name: '日用品',
           value: 'daily',
-          icon: '../../../static/images/icons/daily.png'
-        }, {
+          icon:'../../../static/images/icons/daily.png'
+        },{
           name: '食品',
           value: 'food',
-          icon: '../../../static/images/icons/food.png'
-        }, {
+          icon:'../../../static/images/icons/food.png'
+        },{
           name: '运动装备',
           value: 'sport',
-          icon: '../../../static/images/icons/sport.png'
-        }, {
+          icon:'../../../static/images/icons/sport.png'
+        },{
           name: '交通工具',
           value: 'transportation',
-          icon: '../../../static/images/icons/transportation.png'
-        }, {
+          icon:'../../../static/images/icons/transportation.png'
+        },{
           name: '其他',
           value: 'others',
-          icon: '../../../static/images/icons/others.png'
+          icon:'../../../static/images/icons/others.png'
         }
       ]
     }
   },
   methods: {
-    getKind (kind) {
+    getKind(kind) {
       this.kindValue = kind;
       this.NewOrHot = 0;
       console.log(this.kindValue);
       console.log(this.NewOrHot);
       //http请求
     },
-    getNewOrHot (NewOrHot) {
+    getNewOrHot(NewOrHot) { 
       this.NewOrHot = NewOrHot;
       console.log(this.kindValue);
       console.log(this.NewOrHot);
@@ -99,5 +99,6 @@ export default {
 
 <style lang="scss">
 #homeKind {
+	
 }
 </style>

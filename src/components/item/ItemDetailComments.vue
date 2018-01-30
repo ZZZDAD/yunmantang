@@ -43,61 +43,62 @@ export default {
 			show: 0,
 		}
 	},
-	props: {
-		comments: {
-			type: Array,
-			required: true
-		}
-	},
+  props: {
+    comments: {
+    	type: Array,
+      required: true
+    }
+  },
 }
 </script>
 
 <style lang="scss">
 #itemDetailComments {
-  .commentsHead {
-    font-size: 1.1em;
-    color: rgb(24, 152, 217);
-    padding: 5px 30px;
-    border-top: 1px rgb(24, 152, 217) solid;
-  }
-  .comments {
-    .comment {
-      border-top: 1px rgb(233, 233, 233) solid;
-      min-height: 70px;
-      .headImage {
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        float: left;
-        margin: 10px;
-      }
-      .text {
-        display: inline-block;
-        width: 70%;
-        margin-left: 10px;
-        margin-top: 10px;
-        .userName {
-          width: 60%;
-          font-size: 1.1em;
-        }
-        .commentContent {
-          display: block;
-          font-size: 0.9em;
-          color: rgb(71, 71, 71);
-        }
-      }
-    }
-  }
-  .showTip,
-  .putTip {
-    padding: 5px 5px 10px;
-    text-align: right;
-    color: rgb(248, 167, 87);
-    border-bottom: 1px rgb(233, 233, 233) solid;
-    img {
-      width: 13px;
-      margin-right: 35%;
-    }
-  }
+	.commentsHead {
+		font-size: 1.1em;
+		color: rgb(24,152,217);
+		padding: 5px 30px;
+		border-top: 1px rgb(24,152,217) solid;
+	}
+	.comments {
+		.comment {
+			border-top: 1px rgb(233,233,233) solid;
+			min-height: 70px;
+			.headImage {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				float: left;
+				margin: 10px;
+			}
+			.text {
+				display: inline-block;
+				width: 70%;
+				margin-left: 10px;
+				margin-top: 10px;
+				.userName {
+					width: 60%;
+					font-size: 1.1em;
+
+				}
+				.commentContent {
+					display: block;
+					font-size: .9em;
+					color: rgb(71,71,71);
+
+				}
+			}
+		}
+	}
+	.showTip,.putTip {
+		padding: 5px 5px 10px;
+		text-align: right;
+		color: rgb(248,167,87);
+		border-bottom: 1px rgb(233,233,233) solid;
+		img {
+			width: 13px;
+			margin-right: 35%;
+		}
+	}
 }
 </style>

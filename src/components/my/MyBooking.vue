@@ -10,7 +10,6 @@
       <div
         class="myBookingItem"
         v-for='(item, index) of myBookingItems'
-        :key='index'
       >
         <div class="highlightBG">
           <div class="image">
