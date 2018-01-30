@@ -1,0 +1,19 @@
+<template>
+  <div>
+    MessageList
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
